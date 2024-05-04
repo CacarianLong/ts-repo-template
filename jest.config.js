@@ -1,0 +1,7 @@
+const tsPreset = require('ts-jest/jest-preset');
+
+module.exports = {
+  ...tsPreset,
+  testEnvironment: 'node',
+  testPathIgnorePatterns: [],
+}

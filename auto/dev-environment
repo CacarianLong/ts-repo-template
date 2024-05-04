@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+IMAGE_NAME="cash_coding_exercise"
+IMAGE_TAG="dev"
+
+docker build -t "$IMAGE_NAME:$IMAGE_TAG" .
+
+docker run --rm -it "$IMAGE_NAME:$IMAGE_TAG" "${@}"
